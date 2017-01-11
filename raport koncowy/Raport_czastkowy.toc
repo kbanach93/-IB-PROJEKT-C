@@ -1,18 +1,19 @@
-\contentsline {section}{\numberline {1}Linear SVM}{3}
-\contentsline {subsection}{\numberline {1.1}Opis algorytmu}{3}
-\contentsline {subsubsection}{\numberline {1.1.1}Metoda wektor\IeC {\'o}w wspieraj\IeC {\k a}cych (SVM)}{3}
-\contentsline {subsubsection}{\numberline {1.1.2}Sekwencyjna minimalna optymalizacja (SMO)}{7}
-\contentsline {subsubsection}{\numberline {1.1.3}Poszukiwanie wsp\IeC {\'o}\IeC {\l }czynnik\IeC {\'o}w Lagrange'a}{7}
-\contentsline {subsubsection}{\numberline {1.1.4}Heurystyka wyboru wsp\IeC {\'o}\IeC {\l }czynnik\IeC {\'o}w do optymalizacji}{8}
-\contentsline {subsubsection}{\numberline {1.1.5}Obliczanie progu}{9}
-\contentsline {subsection}{\numberline {1.2}Opis sposobu implementacji algorytmu}{9}
-\contentsline {subsubsection}{\numberline {1.2.1}Schematy blokowe dzia\IeC {\l }ania algorytmu}{9}
-\contentsline {subsection}{\numberline {1.3}Wizualizacja dzia\IeC {\l }ania algorytmu}{13}
-\contentsline {subsubsection}{\numberline {1.3.1}Wizualizacja dla dw\IeC {\'o}ch cech}{13}
-\contentsline {subsubsection}{\numberline {1.3.2}Wizualizacja dla trzech cech}{14}
-\contentsline {subsection}{\numberline {1.4}Opis informatyczny procedur}{15}
-\contentsline {section}{\numberline {2}Klasyfikator Bayesa}{20}
-\contentsline {subsection}{\numberline {2.1}Opis algorytmu}{20}
-\contentsline {subsection}{\numberline {2.2}Implementacja}{20}
-\contentsline {subsection}{\numberline {2.3}Wykorzystanie klasyfikatora do rozpoznawania uderze\IeC {\'n} serca}{21}
-\contentsline {section}{\numberline {3}Por\IeC {\'o}wnanie algorytm\IeC {\'o}w}{23}
+\contentsline {section}{\numberline {1}Abstrakt}{3}
+\contentsline {section}{\numberline {2}Linear SVM}{4}
+\contentsline {subsection}{\numberline {2.1}Opis algorytmu}{4}
+\contentsline {subsubsection}{\numberline {2.1.1}Metoda wektor\IeC {\'o}w wspieraj\IeC {\k a}cych (SVM)}{4}
+\contentsline {subsubsection}{\numberline {2.1.2}Sekwencyjna minimalna optymalizacja (SMO)}{8}
+\contentsline {subsubsection}{\numberline {2.1.3}Poszukiwanie wsp\IeC {\'o}\IeC {\l }czynnik\IeC {\'o}w Lagrange'a}{8}
+\contentsline {subsubsection}{\numberline {2.1.4}Heurystyka wyboru wsp\IeC {\'o}\IeC {\l }czynnik\IeC {\'o}w do optymalizacji}{9}
+\contentsline {subsubsection}{\numberline {2.1.5}Obliczanie progu}{10}
+\contentsline {subsection}{\numberline {2.2}Opis sposobu implementacji algorytmu}{10}
+\contentsline {subsubsection}{\numberline {2.2.1}Schematy blokowe dzia\IeC {\l }ania algorytmu}{10}
+\contentsline {subsection}{\numberline {2.3}Wizualizacja dzia\IeC {\l }ania algorytmu}{14}
+\contentsline {subsubsection}{\numberline {2.3.1}Wizualizacja dla dw\IeC {\'o}ch cech}{14}
+\contentsline {subsubsection}{\numberline {2.3.2}Wizualizacja dla trzech cech}{15}
+\contentsline {subsection}{\numberline {2.4}Opis informatyczny procedur}{16}
+\contentsline {section}{\numberline {3}Klasyfikator Bayesa}{21}
+\contentsline {subsection}{\numberline {3.1}Opis algorytmu}{21}
+\contentsline {subsection}{\numberline {3.2}Implementacja}{21}
+\contentsline {subsection}{\numberline {3.3}Wykorzystanie klasyfikatora do rozpoznawania uderze\IeC {\'n} serca}{22}
+\contentsline {section}{\numberline {4}Por\IeC {\'o}wnanie algorytm\IeC {\'o}w}{24}
