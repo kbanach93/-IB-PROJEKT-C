@@ -11,4 +11,8 @@
 \contentsline {subsubsection}{\numberline {1.3.1}Wizualizacja dla dw\IeC {\'o}ch cech}{13}
 \contentsline {subsubsection}{\numberline {1.3.2}Wizualizacja dla trzech cech}{14}
 \contentsline {subsection}{\numberline {1.4}Opis informatyczny procedur}{15}
-\contentsline {section}{\numberline {2}Por\IeC {\'o}wnanie algorytm\IeC {\'o}w}{19}
+\contentsline {section}{\numberline {2}Klasyfikator Bayesa}{20}
+\contentsline {subsection}{\numberline {2.1}Opis algorytmu}{20}
+\contentsline {subsection}{\numberline {2.2}Implementacja}{20}
+\contentsline {subsection}{\numberline {2.3}Wykorzystanie klasyfikatora do rozpoznawania uderze\IeC {\'n} serca}{21}
+\contentsline {section}{\numberline {3}Por\IeC {\'o}wnanie algorytm\IeC {\'o}w}{23}

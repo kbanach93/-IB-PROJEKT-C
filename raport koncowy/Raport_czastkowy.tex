@@ -581,7 +581,138 @@ SVM Tutorial
 \\\texttt{http://www.svm-tutorial.com/2014/11/svm-understanding-math-part-2/}
 
 \end{thebibliography}
+\newpage
+\section{Klasyfikator Bayesa}
+\subsection{Opis algorytmu}
+Działanie klasyfikatora Bayesa polega na przyporządkowaniu nowego przypadku do wcześniej zdefiniowanej klasy.  Podstawowym założeniem tego klasyfikatora jest niezależność każdej cechy występującej w klasie od reszty cech. Innymi słowy użyty klasyfikator bayesowski jest klasyfikatorem probabilistycznym z założeniem niezależności. Oznacza to, że obecność lub brak danej cechy nie łączy się z występowaniem jakiejkolwiek innej. Omawiany klasyfikator jest statystycznym klasyfikatorem opartym na twierdzeniu Bayesa.
 
+\vspace{0.5cm}
+Zakłada się, że dany obiekt $X$ jest reprezentowany przez zbiór cech, którego wartości należą do zbioru $X=(x_{1}, x_{2}, ..., x_{n})$. Reguła Bayesa mówi, że obiekt $X$ należy do klasy $C_{j}$, dla której wartość prawdopodobieństwa $P(C_{i}|X)$ jest największa. $P(C|X)$ to prawdopodobieństwo, że obiekt $X$ należy do klasy $C$. Aby oszacować prawdopodobieństwa a-posterori $P(C|X)$ należy skorzystać z twierdzenia Bayesa, które ma postać:
+
+\begin{equation}
+P(C|X) = P(X|C)P(C)/P(X)
+\end{equation}
+
+gdzie:
+
+$P(C)$ - prawdopodobieństwo a-priori wystąpienia klasy $C$ (czyli prawdopodobieństwo, że dowolny przykład należy do klasy $C$),
+
+$P(X|C)$ - prawdopodobieństwo a-posteriori, że obiekt $X$ należy do klasy~$C$,
+
+$P(X)$ - prawdopodobieństwo wystąpienia obiektu $X$.
+
+\vspace{0.5cm}
+Prawdopodobieństwo $P(X)$ jest dla wszystkich klas takie same, więc tak naprawdę klasa $C_{i}$, dla której wartość $P(C|X)$ jest największa to klasa dla której prawdopodobieństwo $P(X|C_{i})P(C_{i})$ jest największe. 
+
+\vspace{0.5cm}
+Wartość $P(C_{i})$ zastępuje się względną częstością klasy $C{i}$ lub można założyć, że wszystkie klasy mają takie same prawdopodobieństwo.
+ 
+ \vspace{0.5cm}
+Prawdopodobieństwo $P(X|C_{i}$P(X|Ci) to tak naprawdę iloczyn prawdopodobieństw kolejnych atrybutów:
+
+\begin{equation}
+P(X|C_{i}) = \prod_{j=1}^{n}P(x_{j}|C_{i})
+\end{equation}
+
+W przypadku wystąpienia ciągłego atrybutu prawdopodobieństwo $P(X_{j}|C_{i})$ należy estymować za pomocą funkcji gęstości prawdopodobieństwa przy założeniu normalnego rozkładu wartości atrybutów:
+
+
+\begin{equation}
+f(x) = \frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{(x - \mu)^{2}}{2\sigma^{2}}}
+\end{equation}
+
+gdzie:
+
+$\mu$ - średnia danego atrybutu w klasie,
+
+$\sigma^{2}$ - wariancja atrybutu ~\cite{aa}.	
+
+\vspace{0.5cm}
+Naiwny model Bayesa jest łatwy do zbudowania oraz świetnie sprawdza się w przypadku bardzo dużej ilości danych. Dodatkowo zaletą tej metody jest to, że wymaga nie dużej ilości danych trenujących, aby uzyskać potrzebne parametry klasyfikujące.
+\subsection{Implementacja}
+Patrząc pod kątem implementacji można wyróżnić dwa procesy: ucznia klasyfikatora i testowania. 
+Proces uczenia będzie polegał na wyliczeniu odpowiednich parametrów. Są nimi częstość wystąpienia danej klasy $P(C_{i})$, średnia wartość cechy $\mu$ w zależności od klasy, oraz odchylenie standardowe wartości cechy $\sigma^{2}$. Rysunek 11 obrazuje proces uczenia klasyfikatora
+\begin{figure}[h]
+\centering
+\includegraphics[scale = 0.5]{Obrazy/uczenie_schemat}
+\caption{Schemat algorytmu uczenia klasyfikatora.}
+\label{fig:obrazek k}
+\end{figure}
+
+Kolejny etap algorytmu to już analiza danych, które mają zostać sklasyfikowane. Polega ona wyliczeniu dla każdej cechy funkcji gęstości prawdopodobieństwa, ponieważ wszystkie cechy które będą wchodziły w skład obiektu będą cechami ciągłymi. Funkcja ta obliczana jest dla każdej klasy. Następnie w celu otrzymania prawdopodobieństwa $P(X|C_{i})$P(X|Ci) otrzymane wartości wymnaża się. Obiekt zostanie zakwalifikowana do klasy, w której obliczone prawdopodobieństwo $P(X|C_{i})$ jest najwyższe.  Rysunek 12 przedstawia algorytm przypisana klasy do zestawu cech.
+\begin{figure}[h]
+\centering
+\includegraphics[scale = 0.6]{testowanie_schemat}
+\caption{Schemat algorytmu przypisania klasy do obiektu.}
+\label{fig:obrazek k}
+\end{figure}
+
+\subsection{Wykorzystanie klasyfikatora do rozpoznawania uderzeń serca}
+
+W celu wstępnego wyznaczenia skuteczności algorytmu, przeprowadzono klasyfikacje na uderzeniach serca pochodzących z sygnału 100.dat i 228.dat z bazy danych MIT - BIH. Rodzaje uderzeń znajdujące się w tych sygnałach postanowiono podzielić na 3 klasy: 
+\begin{itemize}
+\item uderzenia normalne oznaczone literką \textit{N},
+\item uderzenia komorowe oznaczone literą \textit{V},
+\item inne uderzenia wyróżnione w bazie MIT - BIH.
+\end{itemize}
+
+Zdecydowano się na taki podział ponieważ dwie pierwsze grupy stanowią ponad 90\% wszystkich uderzeń serca występujących w całej bazie MIT-BIH.
+
+\vspace{0.5cm}
+Cechy jakie zostały zdefiniowane dla każdego obiektu to, zaproponowane na podstawie artykułu~\cite{1}:
+\begin{itemize}
+\item Pre interval RR - odległość miedzy aktualnym uderzeniem serca(analizowanym), a poprzednim uderzeniem serca,
+\item Post inreval RR  - odległość między analizowanym uderzenie serca a kolejnym uderzeniem,
+\item Average RR - średnia długość interwału RR dla całego analizowanego sygnału,
+\item Ratio1 - stosunek pre RR interwal i post RR interval
+\item Ratio2 - stosunek per interwalu do Avarage RR 
+\end{itemize}
+
+Dane zostały podzielone na dwie grupy treningową i testową odpowiednio w stosunku 4:1. Ilość obiektów w obu grupach łącznie wynosiło 4322, w grupie testowej było 864 próbek, a w treningowej 3458. Wynik klasyfikacji z wykorzystaniem wszystkich pięciu wcześniej opisanych cech. prezentuje Tabela~1.
+
+\begin{table}[h]
+\centering
+\caption{Wynik klasyfikacji po zastosowaniu klasyfikatora Bayesa.}
+    \begin{tabular}
+{|l|c|c|c|}
+    \hline
+    ~              & Dobrze rozpoznane & Źle rozpoznane &  Dobrze rozpoznane/całość klasy \\ \hline
+    Uderzenia N    & 776                      & 8                          & 0,99                     \\ \hline
+    Uderzenia V    & 71                        & 1                          & 986                         \\ \hline
+    Inne uderzenia & 4                       & 4                           & 0,5                     \\ \hline
+    Suma           & 851                      & 13                          & 0,985                     \\ \hline
+    \end{tabular}
+\end{table}
+ 
+Postanowiono sprawdzić jaka będzie skuteczność klasyfikacji, jeżeli uwzględnionych zostanie mniej cech. Na przykład cechy Ratio1 i Ratio2 są powiązane z przednimi cechami, więc istnieje podejrzenie, że skuteczność klasyfikatora z pominięciem tych cech może być wyższa zgodnie z naiwnym założeniem twierdzenia Bayesa. Okazało się jednak, że najlepszą skuteczność jakią można było uzyskać z wykorzystaniem tych cechy była w momencie nie uwzględniania ostatniej cechy Ratio2. Wyniki jakie otrzymano korzystający tylko pierwszych 4 cech (post i pre interval RR,average RR i Ratio1) znajdują się w Tabeli~2. 
+
+\begin{table}[h]
+\centering
+\caption{Wynik klasyfikacji po zastosowaniu klasyfikatora Bayesa z wykorzystaniem 3 cech.}
+    \begin{tabular}
+{|l|c|c|c|}
+    \hline
+    ~              & Dobrze rozpoznane & Źle rozpoznane &  Dobrze rozpoznane/całość klasy \\ \hline
+    Uderzenia N    & 785                      & 0                          & 1                     \\ \hline
+    Uderzenia V    & 72                       & 0                           & 1                         \\ \hline
+    Inne uderzenia & 0                       & 7                           & 0 \\ \hline
+    Suma           & 857                      & 7                          & 0,992                   \\ \hline
+    \end{tabular}
+\end{table}
+
+Można zauważyć, że w momencie skorzystania z mniejszej liczby cech skuteczność całego klasyfikatora wzrosła, jednak skuteczność w obrębie klas jest już bardzo różnorodna. Wszystkie uderzenia normalne i nadkomorowe występujące w grupie testowej zostały właściwie rozpoznane, jednak żadne z innych uderzeń nie zostało poprawnie sklasyfikowane. Powodem może być duża różnorodność wartości w obrębie tej klasy. Natomiast korzystając z wszystkich wyznaczonych cech, skuteczność poprawnego zaklasyfikowania do innych uderzeń jest znacznie większa i wynosi 50\%. Jednak w obu przypadkach skuteczność rozpoznania utrzymuje się na wysokim poziomie. Klasyfikator jest bardzo prosty w implementacji klasyfikacja przebiega bardzo sprawnie. O skuteczności algorytmu nie decyduje ilość danych treningowych tylko ich reprezentatywność. 
+Klasyfikator Bayesa jest tak skonstruowany, że jednie czym można manipulować, aby polepszyć wyniki to zbiór treningowy - ilość i  rodzaj cech danego uderzenia, natomiast ilość danych w zbiorze treningowym nie jest już tak bardzo istotna.
+
+\begin{thebibliography}{99}
+\bibitem{aa} Wykład: Klasyfikacja, Naiwny klasyfikator Bayesa
+\\\texttt{http://wazniak.mimuw.edu.pl}
+\bibitem{1} K.M.~Senapati:
+\emph{Automatic Classification of Heartbeats Using ECG Morphology and Heartbeat Interval Features}, Electrical Engineering IIT, 2014
+
+\end{thebibliography}
+
+
+\newpage
 \section{Porównanie algorytmów}
 
 
