@@ -721,10 +721,10 @@ Klasyfikator Bayesa jest tak skonstruowany, że jednie czym można manipulować,
 \centering
 \caption{Skuteczność klasyfikacji}
 \label{accuracyTable}
-\begin{tabular}{|l|l|l|l|l|}
+\begin{tabular}{|l|l|l|l|l|l|}
 \hline
-kNN + ENN & Linear SVM & SVM + RBF & Naive Bayes & LDA \\ \hline
-          & 76\%       & 99\%      & 96\%        &     \\ \hline
+kNN & ENN & Linear SVM & SVM + RBF & Naive Bayes & LDA \\ \hline
+  98\%   &  98\%  & 76\%       & 99\%      & 96\%        &     \\ \hline
 \end{tabular}
 \end{table}
 
@@ -732,11 +732,11 @@ kNN + ENN & Linear SVM & SVM + RBF & Naive Bayes & LDA \\ \hline
 \centering
 \caption{Czasy uczenia i klasyfikacji}
 \label{timesTable}
-\begin{tabular}{l|l|l|l|l|l|}
-\cline{2-6}
-                                        & kNN + ENN & Linear SVM & SVM + RBF & Naive Bayes & LDA \\ \hline
-\multicolumn{1}{|l|}{Czas uczenia}      &           &  $8517\: ms$   &   $13481\: ms$   &   $21.9034\: ms$ & $15\: ms$    \\ \hline
-\multicolumn{1}{|l|}{Czas klasyfikacji} &           &   $1\: ms$  &      $79\: ms$     &     $29.2936\: ms$        & $< 1\: ms$  \\ \hline
+\begin{tabular}{l|l|l|l|l|l|l|}
+\cline{2-7}
+                                        & kNN & ENN & Linear SVM & SVM + RBF & Naive Bayes & LDA \\ \hline
+\multicolumn{1}{|l|}{Czas uczenia}      &  -  &  -   &  $8517\: ms$   &   $13481\: ms$   &   $21.9034\: ms$ & $15\: ms$    \\ \hline
+\multicolumn{1}{|l|}{Czas klasyfikacji} &  $109 \: ms$   &   $1094\: ms$   &   $1\: ms$  &      $79\: ms$     &     $29.2936\: ms$        & $< 1\: ms$  \\ \hline
 \end{tabular}
 \end{table}
 
