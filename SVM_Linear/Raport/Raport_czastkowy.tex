@@ -10,16 +10,16 @@
 \graphicspath{{obrazy/}}
 
 \begin{document}
-\title{Raport końcowy projektu z przedmiotu Dedykowane Algorytmy Diagnostyki Medycznej}
-\author{>autorzy<}
-\date{12 stycznia 2017}
+\title{Raport cząstkowy projektu z przedmiotu Dedykowane Algorytmy Diagnostyki Medycznej}
+\author{Jędrzej Chiliński, Kacper Banach}
+\date{22 grudnia 2016}
 \maketitle
 
 
 \begin{center}
 \includegraphics{logo_agh}\\
 \vspace{20mm}
-{\LARGE Klasyfikacja uderzeń serca}\\
+{\LARGE Klasyfikacja uderzeń serca za pomocą algorytmu liniowego SVM}\\
 
 \end{center}
 
@@ -27,10 +27,9 @@
 \tableofcontents
 \vspace{10mm}
 \newpage
-\section{Linear SVM}
-\subsection{Opis algorytmu}
+\section{Opis algorytmu}
 \vspace{5mm}
-\subsubsection{Metoda wektorów wspierających (SVM)}
+\subsection{Metoda wektorów wspierających (SVM)}
 \vspace{5mm}
 
 
@@ -184,7 +183,7 @@ dla pewnych  $\alpha_i > 0 $
 \vspace{5mm} Powyższy problem optymalizacyjny może zostać rozwiązany przy pomocy algorytmu \textit{sekwencyjnej minimalnej optymalizacji} który został szczegółowo opisany w kolejnym podrozdziale. 
 
 \newpage
-\subsubsection{Sekwencyjna minimalna optymalizacja (SMO)}
+\subsection{Sekwencyjna minimalna optymalizacja (SMO)}
 SMO jest jednym z algorytmów pozwalających rozwiązać główny problem w nauczaniu SVM, czyli problem programowania kwadratowego (oznaczany jako \textit{QP}). SMO pozwala na uniknięcie problemów związanych z optymizacją numeryczną poprzez rozkład  całościowego problemu na podproblemy.
 
 
@@ -311,9 +310,9 @@ b_2 = E_2 + y_1(\alpha^{nowy}_1 - \alpha_1)K(\overrightarrow{x_1},\overrightarro
 
 Jeżeli oba progi $b_1$ i $b_2$ są prawidłowe, to są sobie równe. Gdy oba współczynniki Lagrange'a leżą na granicy i gdy $L$ nie jest równe $H$, wtedy odległością między $b_1$ i $b_2$ są wszystkie progi, które są zgodne z warunkami KKT. SMO wybiera wtedy próg leżący pośrodku między $b_1$ oraz $b_2$.
 
-\subsection{Opis sposobu implementacji algorytmu}
+\section{Opis sposobu implementacji algorytmu}
 
-\subsubsection{Schematy blokowe działania algorytmu}
+\subsection{Schematy blokowe działania algorytmu}
 
 Sposób działania algorytmu przedstawiono za pomocą trzech schematów blokowych, które znajdują się poniżej:
 
@@ -335,9 +334,9 @@ Sposób działania algorytmu przedstawiono za pomocą trzech schematów blokowyc
 \textit{(opracowanie własne)}
 \end{center}
 
-\subsection{Wizualizacja działania algorytmu}
+\section{Wizualizacja działania algorytmu}
 W celu zobrazowania sposobu działania prototypu algorytmu opracowanego w środowisku MATLAB, dokonano wizualizacji wyznaczonej hiperpłaszczyzny. Dane należące do dwóch różnych kategorii zostały wylosowane przy pomocy funkcji $rand()$.
-\subsubsection{Wizualizacja dla dwóch cech}
+\subsection{Wizualizacja dla dwóch cech}
 Na rysunku nr 4 przedstawiono dwa zbiory punktów należących do dwóch różnych klas, które zostały rozdzielone przy pomocy obliczonej hiperpłaszczyzny. W tym wypadku użyto dwóch cech, a przedstawione dane były liniowo separowalne. 
 \begin{figure}[h]
 \centering
@@ -355,7 +354,7 @@ Na rysunku nr 5 przedstawiono dwa zbiory punktów należących do dwóch różny
 \textit{(opracowanie własne)}
 \end{figure}
 
-\subsubsection{Wizualizacja dla trzech cech}
+\subsection{Wizualizacja dla trzech cech}
 Na rysunku nr 6 przedstawiono dwa zbiory punktów należących do dwóch różnych klas, które zostały rozdzielone przy pomocy obliczonej hiperpłaszczyzny. W tym wypadku użyto trzech cech, a przedstawione dane  były liniowo separowalne. 
 
 \begin{figure}[h]
@@ -375,7 +374,7 @@ Na rysunku nr 7 przedstawiono dwa zbiory punktów należących do dwóch różny
 \end{figure}
 
 
-\subsection{Opis informatyczny procedur}
+\section{Opis informatyczny procedur}
 
 
 \fbox{funkcja optimizePair:}\\
@@ -581,34 +580,4 @@ SVM Tutorial
 \\\texttt{http://www.svm-tutorial.com/2014/11/svm-understanding-math-part-2/}
 
 \end{thebibliography}
-
-\section{Porównanie algorytmów}
-
-
-
-\begin{table}[h]
-\centering
-\caption{Skuteczność klasyfikacji}
-\label{accuracyTable}
-\begin{tabular}{|l|l|l|l|l|}
-\hline
-kNN + ENN & Linear SVM & SVM + RBF & Naive Bayes & LDA \\ \hline
-          & 76\%       & 99\%      & 96\%        &     \\ \hline
-\end{tabular}
-\end{table}
-
-\begin{table}[h]
-\centering
-\caption{Czasy uczenia i klasyfikacji}
-\label{timesTable}
-\begin{tabular}{l|l|l|l|l|l|}
-\cline{2-6}
-                                        & kNN + ENN & Linear SVM & SVM + RBF & Naive Bayes & LDA \\ \hline
-\multicolumn{1}{|l|}{Czas uczenia}      &           &  $8517\: ms$   &   $13481\: ms$   &   $21.9034\: ms$ & $15\: ms$    \\ \hline
-\multicolumn{1}{|l|}{Czas klasyfikacji} &           &   $1\: ms$  &      $79\: ms$     &     $29.2936\: ms$        & $< 1\: ms$  \\ \hline
-\end{tabular}
-\end{table}
-
-Testy wykonano na komputerze wyposażonym w procesor Intel Core i5-4200H o taktowaniu $2.80 \: GHz$ oraz 8 $Gb$ RAM w systemie operacyjnym Windows 10 64-bit.
-
 \end{document}
