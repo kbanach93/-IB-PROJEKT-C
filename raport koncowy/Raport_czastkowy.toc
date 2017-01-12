@@ -19,31 +19,30 @@
 \contentsline {subsection}{\numberline {3.4}Podsumowanie}{23}
 \contentsline {section}{\numberline {4}k-Nearest Neighbours}{24}
 \contentsline {subsection}{\numberline {4.1}Za\IeC {\l }o\IeC {\.z}enia wst\IeC {\k e}pne metody}{24}
-\contentsline {subsection}{\numberline {4.2}Opis metody \nobreakspace {}\cite {doktorska}}{24}
+\contentsline {subsection}{\numberline {4.2}Opis metody}{24}
 \contentsline {subsection}{\numberline {4.3}Klasy}{24}
 \contentsline {subsection}{\numberline {4.4}Implementacja prototypu algorytmu w \IeC {\'s}rodowisku MATLAB}{25}
-\contentsline {subsection}{\numberline {4.5}Walidacja algorytmu}{25}
 \contentsline {section}{\numberline {5}Extended Nearest Neighbours}{25}
 \contentsline {subsection}{\numberline {5.1}Ograniczenia metody k-NN \nobreakspace {}\cite {knn}}{25}
-\contentsline {subsection}{\numberline {5.2}Opis metody eNN\nobreakspace {}\cite {enn} \nobreakspace {}\cite {enn2} }{25}
+\contentsline {subsection}{\numberline {5.2}Opis metody eNN }{25}
 \contentsline {subsection}{\numberline {5.3}Implementacja w \IeC {\'s}rodowisku MatLab}{26}
 \contentsline {subsection}{\numberline {5.4}Podsumowanie}{26}
-\contentsline {section}{\numberline {6}Radial Basis Function Kernel SVM}{28}
-\contentsline {subsection}{\numberline {6.1}Wst\IeC {\k e}p}{28}
-\contentsline {subsection}{\numberline {6.2}Zarys proponowanego rozwi\IeC {\k a}zania}{28}
-\contentsline {subsection}{\numberline {6.3}Obliczenie cech kompleks\IeC {\'o}w QRS}{28}
-\contentsline {subsubsection}{\numberline {6.3.1}Matematyczny spos\IeC {\'o}b obliczenia cech}{28}
-\contentsline {subsubsection}{\numberline {6.3.2}Klasyfikacja przy u\IeC {\.z}yciu obliczonych cech}{29}
-\contentsline {subsection}{\numberline {6.4}Metoda maszyny wektor\IeC {\'o}w no\IeC {\'s}nych (SVM)}{31}
-\contentsline {subsubsection}{\numberline {6.4.1}Podstawowe za\IeC {\l }o\IeC {\.z}enia metody}{31}
-\contentsline {subsubsection}{\numberline {6.4.2}Radial Basis Function}{32}
-\contentsline {subsubsection}{\numberline {6.4.3}Matematyczne podstawy implementacji}{32}
-\contentsline {subsubsection}{\numberline {6.4.4}Implementacja w C++}{33}
-\contentsline {subsection}{\numberline {6.5}Wyniki}{34}
-\contentsline {subsection}{\numberline {6.6}Wnioski}{36}
-\contentsline {section}{\numberline {7}Por\IeC {\'o}wnanie algorytm\IeC {\'o}w}{37}
-\contentsline {subsection}{\numberline {7.1}Opis zbior\IeC {\'o}w danych}{37}
-\contentsline {subsubsection}{\numberline {7.1.1}Zbi\IeC {\'o}r danych 1}{37}
-\contentsline {subsection}{\numberline {7.2}Skuteczno\IeC {\'s}\IeC {\'c} klasyfikacji}{37}
-\contentsline {subsection}{\numberline {7.3}Czas uczenia i klasyfikacji}{38}
-\contentsline {subsection}{\numberline {7.4}Czu\IeC {\l }o\IeC {\'s}\IeC {\'c} i specyficzno\IeC {\'s}\IeC {\'c} klasyfikator\IeC {\'o}w}{38}
+\contentsline {section}{\numberline {6}Radial Basis Function Kernel SVM}{27}
+\contentsline {subsection}{\numberline {6.1}Wst\IeC {\k e}p}{27}
+\contentsline {subsection}{\numberline {6.2}Zarys proponowanego rozwi\IeC {\k a}zania}{27}
+\contentsline {subsection}{\numberline {6.3}Obliczenie cech kompleks\IeC {\'o}w QRS}{27}
+\contentsline {subsubsection}{\numberline {6.3.1}Matematyczny spos\IeC {\'o}b obliczenia cech}{27}
+\contentsline {subsubsection}{\numberline {6.3.2}Klasyfikacja przy u\IeC {\.z}yciu obliczonych cech}{28}
+\contentsline {subsection}{\numberline {6.4}Metoda maszyny wektor\IeC {\'o}w no\IeC {\'s}nych (SVM)}{30}
+\contentsline {subsubsection}{\numberline {6.4.1}Podstawowe za\IeC {\l }o\IeC {\.z}enia metody}{30}
+\contentsline {subsubsection}{\numberline {6.4.2}Radial Basis Function}{31}
+\contentsline {subsubsection}{\numberline {6.4.3}Matematyczne podstawy implementacji}{31}
+\contentsline {subsubsection}{\numberline {6.4.4}Implementacja w C++}{32}
+\contentsline {subsection}{\numberline {6.5}Wyniki}{33}
+\contentsline {subsection}{\numberline {6.6}Wnioski}{35}
+\contentsline {section}{\numberline {7}Por\IeC {\'o}wnanie algorytm\IeC {\'o}w}{36}
+\contentsline {subsection}{\numberline {7.1}Opis zbior\IeC {\'o}w danych}{36}
+\contentsline {subsubsection}{\numberline {7.1.1}Zbi\IeC {\'o}r danych 1}{36}
+\contentsline {subsection}{\numberline {7.2}Skuteczno\IeC {\'s}\IeC {\'c} klasyfikacji}{36}
+\contentsline {subsection}{\numberline {7.3}Czas uczenia i klasyfikacji}{37}
+\contentsline {subsection}{\numberline {7.4}Czu\IeC {\l }o\IeC {\'s}\IeC {\'c} i specyficzno\IeC {\'s}\IeC {\'c} klasyfikator\IeC {\'o}w}{37}

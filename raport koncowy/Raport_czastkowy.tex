@@ -736,29 +736,26 @@ Klasyfikator Bayesa jest tak skonstruowany, że jednie czym można manipulować,
 \section{k-Nearest Neighbours}
 \subsection{Założenia wstępne metody} 
 \begin{itemize}
-\item Dany jest zbiór uczący wraz z wektorem zmiennych objaśniających oraz wartością zmiennej objaśnianej
-\item Dany jest zbiór testowy wraz z wektorem zmiennych objaśniających dla którego prognozuje się wartość zmiennej objaśnianej
+\item Dany jest zbiór uczący wraz z wektorem zmiennych objaśniających (cech) oraz wartością zmiennej objaśnianej
+\item Dany jest zbiór testowy wraz z wektorem zmiennych objaśniających (cech) dla którego prognozuje się wartość zmiennej objaśnianej
+\item Parametr k jest dobierany przed rozpoczęciem działania algorytmu
 \end{itemize}
 
+\subsection{Opis metody}
+Klasyfikator k-Najbliższych Sąsiadów to nieparametryczna metoda klasyfikacji oznaczana jako k-NN (\emph{k-Nearest Neighbours}). Algorytm kNN nie wykonuje procedury uczenia się klasyfikatora - po prostu zapamiętuje wszystkie próbki ze zbioru treningowego. Ideą metody jest klasyfikacja na bieżąco, czyli wtedy gdy pojawia się potrzeba analizy nowego przypadku. Celem metody jest poszukiwanie klasy, która jest najbliższa analizowanemu przypadkowi. W tym celu próbka testowa jest porównywana z wszystkimi próbkami ze zbioru treningowego. Istnieją różne miary odległości i podobieństwa pomiędzy przypadkowi i są one dobierane odpowiednio dla analizowanych danych. - w przypadku niniejszego projektu posłużono się \emph{odległością euklidesową}  ~\cite{doktorska}:
 
-Proces uczenia się klasyfikatora k-NN polega po prostu na doborze parametru k. Zbiór uczący i testowy to wektory cech wyodrębnionych na drodze przetwarzania sygnału EKG. Na podstawie zbioru testowego klasyfikator uczy się przyporządkowywania cech do odpowiednich klas, a już podczas analizy zbioru testowego klasyfikator samodzielnie przyporządkowuje cechy do odpowiedniej klasy. Proces klasyfikacji obrazuje Rysunek 3.
+\[ d(x,y) = \sqrt{\displaystyle\sum_{i=1}^{n} |x_{i} - y_{i}|^{2}} \]
+
+Parametr k jest dobierany przez rozpoczęciem działania algorytmu i opisuje ilość najbliższych sąsiadów jakie wyszuka algorytm. Spośród k-sąsiadów jako wynik klasyfikacji wybierana jest klasa najliczniej występująca klasa wśród najbliższych sąsiadów. Odległość od danych sąsiadów na tym etapie nie ma już znaczenia, chyba że liczba sąsiadów z poszczególnych klas będzie identyczna. Proces klasyfikacji obrazuje Rysunek 13.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.6]{algorytm.png}
 \caption{Proces klasyfikowania zespołu QRS do danej klasy}
 \end{figure}
 
-\subsection{Opis metody ~\cite{doktorska}}
-Klasyfikator k-Najbliższych Sąsiadów to nieparametryczna metoda klasyfikacji oznaczana jako k-NN (\emph{k-Nearest Neighbours}). Rozpoznawany obiekt zalicza się do tej klasy, do której należy większość z jego K najbliższych sąsiadów. Obiekty są analizowane w taki sposób, że oblicza się odległości pomiędzy nimi. Istnieją różne miary podobieństwa - w przypadku niniejszego projektu posłużono się \emph{odległością euklidesową}:
+Na jakość klasyfikacji ma wpływ liczba K uwzględnionych sąsiadów oraz rozkład w przestrzeni wielowymiarowej poprzednich próbek. Wybór odpowiedniej liczby sąsiadów K jest podstawowym zadaniem podczas projektowania klasyfikatora. Najczęściej jest to wartość dająca najlepsze rezultaty w fazie treningowej. Zbyt duża liczba K będzie powodowała wysoką złożoność obliczeniową, a zbyt mała sprawi, że klasyfikator nie będzie odporny na szumy. \\
 
-\[ d(x,y) = \sqrt{\displaystyle\sum_{i=1}^{n} |x_{i} - y_{i}|^{2}} \]
-
-Klasyfikator ten odnajduje K najbliższych sąsiadów bieżącej próbki i zlicza próbki przypisane do poszczególnych klas. Bieżąca próbka zostaje przydzielona do klasy, która występuje najczęściej wśród swoich najbliższych K sąsiadów. Odległość od danych próbek na tym etapie nie ma już znaczenia, chyba że liczba sąsiadów z poszczególnych klas będzie identyczna. \\
-
-Na jakość klasyfikacji ma wpływ liczba K uwzględnionych sąsiadów oraz rozkład w przestrzeni wielowymiarowej poprzednich próbek. Wybór odpowiedniej liczby sąsiadów K jest podstawowym zadaniem podczas projektowania klasyfikatora. Zbyt duża liczba K będzie powodowała wysoką złożoność obliczeniową, a zbyt mała sprawi, że klasyfikator nie będzie odporny na szumy. \\
-
-Zaletami tej metody jest prosty proces uczenia się i łatwość implementacji. Do wad można zaliczyć  proces klasyfikacji, który musi przeanalizować cały zbiór uczący, żeby obliczyć wszystkie odległości. Powoduje to, że klasyfikator jest tym wolniejszy im obszerniejszy jest zbiór uczący.
-
+Zaletami tej metody jest prosty proces uczenia się i łatwość implementacji. Do wad można zaliczyć  proces klasyfikacji, który musi przeanalizować cały zbiór uczący, żeby obliczyć wszystkie odległości. Powoduje to, że klasyfikator ma dużą złożoność obliczeniową oraz dużą zajętość pamięci (przechowuje cały zbiór treningowy). Dodatkowo metoda ta jest wrażliwa na dane zaszumione lub błędne.
 
 \subsection{Klasy}
 Podczas implementacji prototypu w środowisku MATLAB w wektorach danych testowych i treningowych wyróżniono pięć klas, do których klasyfikowano zespoły QRS. Są to klasy  rekomendowane przez \emph{Association for the Advancement of Medical Instrumentation}: 
@@ -770,14 +767,10 @@ Podczas implementacji prototypu w środowisku MATLAB w wektorach danych testowyc
 \item \textbf{Q} (\emph{unknown beat}) - nierozpoznane pobudzenie
 \end{itemize}
 
-Podczas implementacji algorytmu w środowisku C++ do testowania algorytmu użyto danych, które klasyfikowały próbki do dwóch klas: \begin{itemize}
-\item 1 - uderzenie nadkomorowe (prawidłowe)
-\item -1 - uderzenie komorowe (nieprawidłowe)
-\end{itemize}
 \subsection{Implementacja prototypu algorytmu w środowisku MATLAB}
 W projekcie zaimplementowano funkcję obliczającą k-NN, która po otrzymaniu pojedynczej próbki zawierającej cechy sygnału EKG klasyfikuje ją do odpowiedniej klasy. Algorytm przetestowano na próbkach, których klasa jest znana, po to aby móc zweryfikować poprawność jego działania. Implementacji prototypu dokonano w środowisku MATLAB. \\
 
-Poniżej przedstawiono zaimplementowaną funkcję, która zrealizowana została dla każdej próbki ze zbioru testowego:
+Poniżej przedstawiono zaimplementowaną funkcję, która zrealizowana wykonana dla każdej próbki ze zbioru testowego:
 
 \begin{lstlisting}
 function [ out ] = knnClassification(testData, trainData, trainLabels, k)
@@ -791,23 +784,19 @@ dist = pdist2(testData, trainData);
 end
 \end{lstlisting}
 
-\subsection{Walidacja algorytmu}
-Algorytm przetestowano na zbiorze 100 próbek testowych. Wynik walidacji wykazał, że 98 probek ze 100 zostało sklasyfikowanych poprawnie. Pokazuje to, że algorytm klasyfikuje skutecznie, jednak dalsze testy powinny być przeprowadzone na dużo większym zbiorze testowym.
-
-
 \begin{thebibliography}{99}
 \bibitem{doktorska} Chmielnicki W., \emph{Efektywne metody selekcji cech i rozwiązywania problemu wieloklasowego w nadzorowanej klasyfikacji danych}, Instytut Podstawowych Problemów Techniki Polskiej Akademii Nauk, Kraków 2012
 \end{thebibliography}
 
 \section{Extended Nearest Neighbours} 
 \subsection{Ograniczenia metody k-NN ~\cite{knn}}
-Algorytm k-NN jest szeroko wykorzystywany w wielu różnych dziedzinach. Został nawet zakwalifikowany na konferencji \emph{IEEE International Conference on Data Mining} do dziesięciu najlepszych algorytmów do zastosowań w obrębie \emph{data-mining}. Jednak zastosowanie tego algorytmu wymaga odpowiednio zdefiniowanego parametru k oraz odpowiednio dobranej miary obliczania niepodobieństwa. Ponadto próbki, które nie pasują do żadnej klasy lub są reprezentowane przez klasę o niższej częstości występowania w zbiorze uczącym zostaną \emph{zdominowane} przez klasy o najwyższej gęstości występowania. W takim przypadku liczba sąsiadów dla próbki z klasy drugiej może charakteryzować się większą ilością próbek z klasy pierwszej. Skłoniło to do poszukiwania rozwiązań, które umożliwiłyby jeszcze lepszą skuteczność omawianego algorytmu. 
+Algorytm k-NN jest szeroko wykorzystywany w wielu różnych dziedzinach. Został nawet zakwalifikowany na konferencji \emph{IEEE International Conference on Data Mining} do dziesięciu najlepszych algorytmów do zastosowań w obrębie \emph{data-mining}. Jednak zastosowanie tego algorytmu wymaga odpowiednio zdefiniowanego parametru k oraz odpowiednio dobranej miary obliczania niepodobieństwa. Ponadto próbki, które nie pasują do żadnej klasy lub są reprezentowane przez klasę o niższej częstości występowania w zbiorze uczącym zostaną \emph{zdominowane} przez klasy o najwyższej gęstości występowania. W takim przypadku liczba sąsiadów dla próbki z klasy drugiej może charakteryzować się większą ilością próbek z klasy pierwszej. Skłoniło to do poszukiwania rozwiązań, które umożliwiłyby jeszcze lepszą skuteczność omawianego algorytmu. Jednym z nich jest algorytm emph{extended nearest neighbour}.
 
-\subsection{Opis metody eNN~\cite{enn} ~\cite{enn2} }
+\subsection{Opis metody eNN }
 
-Algorytm ENN (\emph{extended nearest neighbor}) w uproszczeniu używa klasyfikatora KNN do znalezienia k-najbliższych sąsiadów próbki testowej w zbiorze treningowym, a następnie na podstawie obliczenia średniej ważonej kolejnych sąsiadów wybiera tę klasę, dla której suma średnich ważonych do niej przypisanych wśród najbliższych sąsiadów jest największa. Dużą różnicą w stosunku do algorytmu kNN jest brak konieczności wyboru k - algorytm iteruje po wszystkich k od 1 do \(\sqrt(n)\), gdzie n to liczba próbek w zbiorze testowym. Pod uwagę brane są tylko nieparzyste wartości k - pozwala to uniknąć sytuacji, w której doszłoby do konfliktu oraz zmniejsza złożoność obliczeniową algorytmu, która ze względu na iteracje po k jest duża wyższa w porównaniu z eNN. Dodatkowo algorytm kNN nie tworzy żadnego modelu obliczeniowego - każda próbka testowa jest porównywana z całym zbiorem uczącym, co prowadzi do dłuższego czasu działania w porównaniu z innymi klasyfikatorami. \\
+Algorytm ENN (\emph{extended nearest neighbor}) wykorzystuje klasyfikator KNN do odnalezienia k-najbliższych sąsiadów próbki testowej w zbiorze treningowym. Nie wybiera jednak próbki na podstawie liczności sąsiadów z danej klasy, a na podstawie przypisanych do nich wag i wybiera tę klasę, dla której suma wag należących do niej sąsiadów jest największa. Dużą różnicą w stosunku do algorytmu kNN jest brak konieczności wyboru k - algorytm iteruje po wszystkich k od 1 do \(\sqrt(n)\), gdzie n to liczba próbek w zbiorze testowym. Pod uwagę brane są tylko nieparzyste wartości k. Nieparzysta wartość k pozwala uniknąć sytuacji, w której doszłoby do konfliktu oraz zmniejsza złożoność obliczeniową algorytmu, która ze względu na iteracje po k jest duża wyższa w porównaniu z kNN. Dodatkowo algorytm kNN nie tworzy żadnego modelu obliczeniowego - każda próbka testowa jest porównywana z całym zbiorem uczącym, co prowadzi do dłuższego czasu działania w porównaniu z innymi klasyfikatorami. ~\cite{enn} ~\cite{enn2}\\
 
-Średnia ważona i-sąsiada w zborze k-najbliższych sąsiadów:
+Waga i-sąsiada w zborze k-najbliższych sąsiadów:
 \[w(i) = \frac{1}{log_2(1+i)}\]
 
 Średnia ważona dla poszczególnej klasy jest obliczana w następujący sposób:
@@ -819,7 +808,7 @@ Następnie pod uwagę brana jest ta klasa, która występuje najczęściej:
 \subsection{Implementacja w środowisku MatLab}
 Danymi wejściowymi algorytmu są dane testowe oraz dane treningowe. Każdy zespół w ramach grupy posłużył się identycznymi danymi, aby wyniki można było porownać. Na początku znormalizowano dane, jednak i bez tej operacji algorytm działa poprawnie.\\
 
-Zaimplementowaną funkcję liczącą skuteczność algorytmu. Algorytm jest przygotowany tak, aby działał dla różnych zbiorów danych. Funkcja \emph{knnClassification} zwraca wektor k-najbliższych sąsiadów próbki testowej w kolejności od najbliższego do najdalszego sąsiada. Następnie dla każdego sąsiada obliczana jest jego waga. Wagi są sumowane w obrębie danej klasy. Wynikiem klasyfikacji jest ta klasa, której suma wag jest największa. Następnie, gdy zostanie obliczony rezultat dla każdej wartości k to spośród wektora klas wynikowych algorytm klasyfikuję próbkę testową do tej klasy, która występuje najczęściej.
+Algorytm jest przygotowany tak, aby działał dla różnych zbiorów danych (z różną ilością klas oraz cech). Funkcja \emph{knnClassification} zwraca wektor k-najbliższych sąsiadów próbki testowej w kolejności od najbliższego do najdalszego sąsiada. Następnie dla każdego sąsiada obliczana jest jego waga. Wagi są sumowane w obrębie danej klasy. Wynikiem klasyfikacji jest ta klasa, której suma wag jest największa. Następnie, gdy zostanie obliczony rezultat dla każdej wartości k to spośród wektora klas wynikowych algorytm klasyfikuję próbkę testową do tej klasy, która występuje najczęściej.
 
 \begin{lstlisting}
 %enn classification for every test sample
@@ -841,11 +830,11 @@ for testSample=1:length(testData)
 end
 \end{lstlisting}
 
+Algorytmy ENN i KNN najpierw zaimplementowano w środowisku MatLab, a później w języku obiektowym C++ w standardzie C++11 używając środowiska programistycznego Eclipse. Podczas ostatecznej implementacji udoskonalono algorytmy, zarówno w C++ jak i w MatLabie.
+
 
 \subsection{Podsumowanie}
-Algorytmy ENN i KNN najpierw zaimplementowano w środowisku MatLab, a później w języku obiektowym C++ w standardzie C++11 używając środowiska programistycznego Eclipse. Podczas ostatecznej implementacji udoskonalono algorytmy, zarówno w C++ jak i w MatLabie.\\
-
-Przeprowadzono test działania programu. Sprawdzono czas realizacji algorytmu oraz skuteczność właściwego klasyfikowania próbek wyrażoną w procentach. Na zastosowanym zbiorze testowym nie wykryto różnicy w skuteczności dla algorytmu KNN oraz ENN - oba poprawnie zaklasyfikowały 98 próbek ze 100. Był to zbiór testowy wybrany przez całą grupę dla porównania wyników uzyskanych w obrębie poszczególnych zespołów. Oczekiwanym rezultatem była większa skuteczność algorytmu ENN, ponieważ uwzględnia on dalsze sąsiedztwo (a co za tym idzie więcej przypadków). Na innym zestawie danych (z bazy danych physionet) rzeczywiście te oczekiwania się potwierdzały. Jednak algorytm ENN ma dużo większą złożoność obliczeniową niż KNN (ponieważ kilkukrotnie wykorzystuje algorytm KNN do własnych obliczeń).
+Podczas testowania działania algorytmu zmierzono czas realizacji klasyfikacji oraz skuteczność właściwego klasyfikowania próbek wyrażoną w procentach. Na zastosowanym zbiorze testowym nie wykryto różnicy w skuteczności dla algorytmu KNN oraz ENN - oba klasyfikowały na poziomie 98\% oraz 99\%. Oczekiwanym rezultatem była większa skuteczność algorytmu ENN, ponieważ uwzględnia on dalsze sąsiedztwo (a co za tym idzie więcej przypadków). Jednak algorytm ten często jest stosowany dla większej ilości klas - na innym, przetestowanym zbiorze danych z bazy sygnałów biomedycznych PhysioNet wyniki algorytmu rzeczywiście przyniosły oczekiwane rezultaty. Do minusów metody kNN oraz eNN należy duża złożoność obliczeniowa - algorytm nie buduje modelu, a zapamiętuje cały zbiór danych treningowych i z nim porównuje każdą próbkę testową.
 
 \begin{thebibliography}{99}
 \bibitem{knn} Jayalalitha S. Susan D. et al., \emph{K-nearest Neighbour Method of Analysing the ECG Signal (To Find out the Different Disorders Related to Heart}, Journal of Applied Sciences 2014, p.1682-1632, 
