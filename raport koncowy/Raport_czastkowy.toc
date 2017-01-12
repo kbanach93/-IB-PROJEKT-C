@@ -16,6 +16,7 @@
 \contentsline {subsection}{\numberline {3.1}Opis algorytmu}{21}
 \contentsline {subsection}{\numberline {3.2}Implementacja}{21}
 \contentsline {subsection}{\numberline {3.3}Wykorzystanie klasyfikatora do rozpoznawania uderze\IeC {\'n} serca}{22}
+\contentsline {subsection}{\numberline {3.4}Podsumowanie}{23}
 \contentsline {section}{\numberline {4}k-Nearest Neighbours}{24}
 \contentsline {subsection}{\numberline {4.1}Za\IeC {\l }o\IeC {\.z}enia wst\IeC {\k e}pne metody}{24}
 \contentsline {subsection}{\numberline {4.2}Opis metody \nobreakspace {}\cite {doktorska}}{24}
