@@ -848,8 +848,8 @@ Przeprowadzono test działania programu. Sprawdzono czas realizacji algorytmu or
 
 \begin{table}[h]
 \centering
-\caption{Skuteczność klasyfikacji}
-\label{accuracyTable}
+\caption{Skuteczność klasyfikacji - dane Piotra}
+\label{accuracyTable1}
 \begin{tabular}{|l|l|l|l|l|l|}
 \hline
 kNN & ENN & Linear SVM & SVM + RBF & Naive Bayes & LDA \\ \hline
@@ -859,8 +859,8 @@ kNN & ENN & Linear SVM & SVM + RBF & Naive Bayes & LDA \\ \hline
 
 \begin{table}[h]
 \centering
-\caption{Czasy uczenia i klasyfikacji}
-\label{timesTable}
+\caption{Czasy uczenia i klasyfikacji - dane Piotra}
+\label{timesTable1}
 \begin{tabular}{l|l|l|l|l|l|l|}
 \cline{2-7}
                                         & kNN & ENN & Linear SVM & SVM + RBF & Naive Bayes & LDA \\ \hline
@@ -868,6 +868,31 @@ kNN & ENN & Linear SVM & SVM + RBF & Naive Bayes & LDA \\ \hline
 \multicolumn{1}{|l|}{Czas klasyfikacji} &  $109 \: ms$   &   $1094\: ms$   &   $1\: ms$  &      $79\: ms$     &     $29.2936\: ms$        & $< 1\: ms$  \\ \hline
 \end{tabular}
 \end{table}
+
+
+\begin{table}[h]
+\centering
+\caption{Skuteczność klasyfikacji - dane Iwony}
+\label{accuracyTable2}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+kNN & ENN & Linear SVM & SVM + RBF & Naive Bayes & LDA \\ \hline
+  99\%   &  99\%  & 99.7261\%       & 92.8789\%      & 99.8783\%        &   -  \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Czasy uczenia i klasyfikacji  - dane Iwony}
+\label{timesTable2}
+\begin{tabular}{l|l|l|l|l|l|l|}
+\cline{2-7}
+                                        & kNN & ENN & Linear SVM & SVM + RBF & Naive Bayes & LDA \\ \hline
+\multicolumn{1}{|l|}{Czas uczenia}      &  -  &  -   &  $25003\: ms$   &   $7865\: ms$   &   $21.9497 \: ms$ & -    \\ \hline
+\multicolumn{1}{|l|}{Czas klasyfikacji} &  $3563 \: ms$   &   $36328\: ms$   &   $26\: ms$  &      $2920\: ms$     &     $1925.88\: ms$        & - \\ \hline
+\end{tabular}
+\end{table}
+
 
 Testy wykonano na komputerze wyposażonym w procesor Intel Core i5-4200H o taktowaniu $2.80 \: GHz$ oraz 8 $Gb$ RAM w systemie operacyjnym Windows 10 64-bit.
 
