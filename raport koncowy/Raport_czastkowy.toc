@@ -1,48 +1,53 @@
-\contentsline {section}{\numberline {1}Abstrakt}{3}
-\contentsline {section}{\numberline {2}Linear SVM}{4}
-\contentsline {subsection}{\numberline {2.1}Opis algorytmu}{4}
-\contentsline {subsubsection}{\numberline {2.1.1}Metoda wektor\IeC {\'o}w wspieraj\IeC {\k a}cych (SVM)}{4}
-\contentsline {subsubsection}{\numberline {2.1.2}Sekwencyjna minimalna optymalizacja (SMO)}{8}
-\contentsline {subsubsection}{\numberline {2.1.3}Poszukiwanie wsp\IeC {\'o}\IeC {\l }czynnik\IeC {\'o}w Lagrange'a}{8}
-\contentsline {subsubsection}{\numberline {2.1.4}Heurystyka wyboru wsp\IeC {\'o}\IeC {\l }czynnik\IeC {\'o}w do optymalizacji}{9}
-\contentsline {subsubsection}{\numberline {2.1.5}Obliczanie progu}{10}
-\contentsline {subsection}{\numberline {2.2}Opis sposobu implementacji algorytmu}{10}
-\contentsline {subsubsection}{\numberline {2.2.1}Schematy blokowe dzia\IeC {\l }ania algorytmu}{10}
-\contentsline {subsection}{\numberline {2.3}Wizualizacja dzia\IeC {\l }ania algorytmu}{14}
-\contentsline {subsubsection}{\numberline {2.3.1}Wizualizacja dla dw\IeC {\'o}ch cech}{14}
-\contentsline {subsubsection}{\numberline {2.3.2}Wizualizacja dla trzech cech}{15}
-\contentsline {subsection}{\numberline {2.4}Opis informatyczny procedur}{16}
-\contentsline {section}{\numberline {3}Klasyfikator Bayesa}{21}
-\contentsline {subsection}{\numberline {3.1}Opis algorytmu}{21}
-\contentsline {subsection}{\numberline {3.2}Implementacja}{21}
-\contentsline {subsection}{\numberline {3.3}Wykorzystanie klasyfikatora do rozpoznawania uderze\IeC {\'n} serca}{22}
-\contentsline {subsection}{\numberline {3.4}Podsumowanie}{23}
-\contentsline {section}{\numberline {4}k-Nearest Neighbours}{24}
-\contentsline {subsection}{\numberline {4.1}Za\IeC {\l }o\IeC {\.z}enia wst\IeC {\k e}pne metody}{24}
-\contentsline {subsection}{\numberline {4.2}Opis metody}{24}
-\contentsline {subsection}{\numberline {4.3}Klasy}{24}
-\contentsline {subsection}{\numberline {4.4}Implementacja prototypu algorytmu w \IeC {\'s}rodowisku MATLAB}{25}
-\contentsline {section}{\numberline {5}Extended Nearest Neighbours}{25}
-\contentsline {subsection}{\numberline {5.1}Ograniczenia metody k-NN}{25}
-\contentsline {subsection}{\numberline {5.2}Opis metody eNN }{25}
-\contentsline {subsection}{\numberline {5.3}Implementacja w \IeC {\'s}rodowisku MatLab}{26}
-\contentsline {subsection}{\numberline {5.4}Podsumowanie}{26}
-\contentsline {section}{\numberline {6}Radial Basis Function Kernel SVM}{27}
-\contentsline {subsection}{\numberline {6.1}Wst\IeC {\k e}p}{27}
-\contentsline {subsection}{\numberline {6.2}Zarys proponowanego rozwi\IeC {\k a}zania}{27}
-\contentsline {subsection}{\numberline {6.3}Obliczenie cech kompleks\IeC {\'o}w QRS}{27}
-\contentsline {subsubsection}{\numberline {6.3.1}Matematyczny spos\IeC {\'o}b obliczenia cech}{27}
-\contentsline {subsubsection}{\numberline {6.3.2}Klasyfikacja przy u\IeC {\.z}yciu obliczonych cech}{28}
-\contentsline {subsection}{\numberline {6.4}Metoda maszyny wektor\IeC {\'o}w no\IeC {\'s}nych (SVM)}{30}
-\contentsline {subsubsection}{\numberline {6.4.1}Podstawowe za\IeC {\l }o\IeC {\.z}enia metody}{30}
-\contentsline {subsubsection}{\numberline {6.4.2}Radial Basis Function}{31}
-\contentsline {subsubsection}{\numberline {6.4.3}Matematyczne podstawy implementacji}{31}
-\contentsline {subsubsection}{\numberline {6.4.4}Implementacja w C++}{32}
-\contentsline {subsection}{\numberline {6.5}Wyniki}{33}
-\contentsline {subsection}{\numberline {6.6}Wnioski}{35}
-\contentsline {section}{\numberline {7}Por\IeC {\'o}wnanie algorytm\IeC {\'o}w}{36}
-\contentsline {subsection}{\numberline {7.1}Opis zbior\IeC {\'o}w danych}{36}
-\contentsline {subsubsection}{\numberline {7.1.1}Zbi\IeC {\'o}r danych 1}{36}
-\contentsline {subsection}{\numberline {7.2}Skuteczno\IeC {\'s}\IeC {\'c} klasyfikacji}{36}
-\contentsline {subsection}{\numberline {7.3}Czas uczenia i klasyfikacji}{37}
-\contentsline {subsection}{\numberline {7.4}Czu\IeC {\l }o\IeC {\'s}\IeC {\'c} i specyficzno\IeC {\'s}\IeC {\'c} klasyfikator\IeC {\'o}w}{37}
+\contentsline {section}{\numberline {1}Abstrakt}{4}
+\contentsline {section}{\numberline {2}Linear SVM}{5}
+\contentsline {subsection}{\numberline {2.1}Opis algorytmu}{5}
+\contentsline {subsubsection}{\numberline {2.1.1}Metoda wektor\IeC {\'o}w wspieraj\IeC {\k a}cych (SVM)}{5}
+\contentsline {subsubsection}{\numberline {2.1.2}Sekwencyjna minimalna optymalizacja (SMO)}{9}
+\contentsline {subsubsection}{\numberline {2.1.3}Poszukiwanie wsp\IeC {\'o}\IeC {\l }czynnik\IeC {\'o}w Lagrange'a}{9}
+\contentsline {subsubsection}{\numberline {2.1.4}Heurystyka wyboru wsp\IeC {\'o}\IeC {\l }czynnik\IeC {\'o}w do optymalizacji}{10}
+\contentsline {subsubsection}{\numberline {2.1.5}Obliczanie progu}{11}
+\contentsline {subsection}{\numberline {2.2}Opis sposobu implementacji algorytmu}{11}
+\contentsline {subsubsection}{\numberline {2.2.1}Schematy blokowe dzia\IeC {\l }ania algorytmu}{11}
+\contentsline {subsection}{\numberline {2.3}Wizualizacja dzia\IeC {\l }ania algorytmu}{15}
+\contentsline {subsubsection}{\numberline {2.3.1}Wizualizacja dla dw\IeC {\'o}ch cech}{15}
+\contentsline {subsubsection}{\numberline {2.3.2}Wizualizacja dla trzech cech}{16}
+\contentsline {subsection}{\numberline {2.4}Opis informatyczny procedur}{17}
+\contentsline {section}{\numberline {3}Klasyfikator Bayesa}{22}
+\contentsline {subsection}{\numberline {3.1}Opis algorytmu}{22}
+\contentsline {subsection}{\numberline {3.2}Implementacja}{22}
+\contentsline {subsection}{\numberline {3.3}Wykorzystanie klasyfikatora do rozpoznawania uderze\IeC {\'n} serca}{23}
+\contentsline {subsection}{\numberline {3.4}Podsumowanie}{24}
+\contentsline {section}{\numberline {4}k-Nearest Neighbours}{25}
+\contentsline {subsection}{\numberline {4.1}Za\IeC {\l }o\IeC {\.z}enia wst\IeC {\k e}pne metody}{25}
+\contentsline {subsection}{\numberline {4.2}Opis metody}{25}
+\contentsline {subsection}{\numberline {4.3}Klasy}{25}
+\contentsline {subsection}{\numberline {4.4}Implementacja prototypu algorytmu w \IeC {\'s}rodowisku MATLAB}{26}
+\contentsline {section}{\numberline {5}Extended Nearest Neighbours}{26}
+\contentsline {subsection}{\numberline {5.1}Ograniczenia metody k-NN}{26}
+\contentsline {subsection}{\numberline {5.2}Opis metody eNN }{26}
+\contentsline {subsection}{\numberline {5.3}Implementacja w \IeC {\'s}rodowisku MatLab}{27}
+\contentsline {subsection}{\numberline {5.4}Podsumowanie}{27}
+\contentsline {section}{\numberline {6}Radial Basis Function Kernel SVM}{28}
+\contentsline {subsection}{\numberline {6.1}Wst\IeC {\k e}p}{28}
+\contentsline {subsection}{\numberline {6.2}Zarys proponowanego rozwi\IeC {\k a}zania}{28}
+\contentsline {subsection}{\numberline {6.3}Obliczenie cech kompleks\IeC {\'o}w QRS}{28}
+\contentsline {subsubsection}{\numberline {6.3.1}Matematyczny spos\IeC {\'o}b obliczenia cech}{28}
+\contentsline {subsubsection}{\numberline {6.3.2}Klasyfikacja przy u\IeC {\.z}yciu obliczonych cech}{29}
+\contentsline {subsection}{\numberline {6.4}Metoda maszyny wektor\IeC {\'o}w no\IeC {\'s}nych (SVM)}{31}
+\contentsline {subsubsection}{\numberline {6.4.1}Podstawowe za\IeC {\l }o\IeC {\.z}enia metody}{31}
+\contentsline {subsubsection}{\numberline {6.4.2}Radial Basis Function}{32}
+\contentsline {subsubsection}{\numberline {6.4.3}Matematyczne podstawy implementacji}{32}
+\contentsline {subsubsection}{\numberline {6.4.4}Implementacja w C++}{33}
+\contentsline {subsection}{\numberline {6.5}Wyniki}{34}
+\contentsline {subsection}{\numberline {6.6}Wnioski}{36}
+\contentsline {section}{\numberline {7}Liniowa Analiza Dyskryminacyjna}{37}
+\contentsline {subsection}{\numberline {7.1}Wyznaczenie klasyfikatora}{37}
+\contentsline {subsection}{\numberline {7.2}Matlab - implementacja}{38}
+\contentsline {subsection}{\numberline {7.3}C++ - implementacja}{38}
+\contentsline {subsection}{\numberline {7.4}Podsumowanie}{38}
+\contentsline {section}{\numberline {8}Por\IeC {\'o}wnanie algorytm\IeC {\'o}w}{40}
+\contentsline {subsection}{\numberline {8.1}Opis zbior\IeC {\'o}w danych}{40}
+\contentsline {subsubsection}{\numberline {8.1.1}Zbi\IeC {\'o}r danych 1}{40}
+\contentsline {subsection}{\numberline {8.2}Skuteczno\IeC {\'s}\IeC {\'c} klasyfikacji}{40}
+\contentsline {subsection}{\numberline {8.3}Czas uczenia i klasyfikacji}{41}
+\contentsline {subsection}{\numberline {8.4}Czu\IeC {\l }o\IeC {\'s}\IeC {\'c} i specyficzno\IeC {\'s}\IeC {\'c} klasyfikator\IeC {\'o}w}{41}
