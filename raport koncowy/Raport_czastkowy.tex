@@ -1170,7 +1170,7 @@ Czas trenowania klasyfikatora tj. ok. 20 sekund (na komputerze jednego z autoró
 \section{Porównanie algorytmów}
 Porównania dokonano korzystając z dwóch zbiorów danych, w których każdy składał się z innego zestawu cech opisujących uderzenia serca. W obu grupach uderzenia zostały podzielone na dwie klasy: uderzenia \textit{V}, określające uderzenia wygenerowane w obrębie komory, zaliczane do paralogicznych oraz uderzenia \textit{N} reprezentujące normalną, poprawną pracę serca. 
 
-Korzystając z wyznaczonych zbiorów danych klasyfikatory porównano pod kątem skuteczności, czasu uczenia, czasu klasyfikacji w celu wskazania, który z klasyfikatorów najbardziej sprawdza się w rozpoznaniu uderzeń serca. 
+Korzystając z wyznaczonych zbiorów danych klasyfikatory porównano pod kątem skuteczności, czasu uczenia, czasu klasyfikacji, czułości i specyficzności w celu wskazania, który z klasyfikatorów najbardziej sprawdza się w rozpoznaniu uderzeń serca. 
 
 \subsection{Opis zbiorów danych}
 \subsubsection{Zbiór danych 1}
@@ -1185,6 +1185,69 @@ Pierwsza grupa danych opisana jest pięcioma cechami, bazującymi na interwałac
 
 Cechy zostały wyznaczone dla sygnałów 228.dat i 100.dat pochodzących z bazy danych MIT-BIH. Z wyznaczonych danych utworzono dwie grupy: treningową oraz testową, które odpowiednio składały się z 400 i 100 próbek. 
 
+
+\subsection{Skuteczność klasyfikacji}
+
+Jednym z pierwszym parametrów jakie postanowiono porównać jest skuteczność klasyfikacji, czyli stosunek poprawnie rozpoznanych uderzeń serca do wszystkich jakie występują w zbiorze testowym. Poprawność przyporządkowania klasy do danego obiektu jest istotą działania każdego klasyfikatora i jedną z kluczowych jego cech. Procentową skuteczność każdego klasyfikatora  dla obu zestawów danych prezentują Tabele 3 i 4.
+
+\begin{table}[h]
+\centering
+\caption{Skuteczność klasyfikacji - zbiór danych 1}
+\label{accuracyTable2}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+kNN & ENN & Linear SVM & SVM + RBF & Naive Bayes & LDA \\ \hline
+  99\%   &  99\%  & 99.7261\%       & 92.8789\%      & 99.8783\%        &   -  \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Skuteczność klasyfikacji - zbiór danych 2}
+\label{accuracyTable1}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+kNN & ENN & Linear SVM & SVM + RBF & Naive Bayes & LDA \\ \hline
+  98\%   &  98\%  & 76\%       & 99\%      & 96\%        &     \\ \hline
+\end{tabular}
+\end{table}
+
+Dla czterech klasyfikatorów skuteczność poprawnego zaklasyfikowania uderzenia serca jest wysoka i wynosi ponad 95\% dla obu zestawów danych. Dla zbioru danych 1,  skuteczność pięciu klasyfikatorów przekroczyła wartość 92\%.  Aż cztery klasyfikatory w 99\%-tach i wyżej poprawnie rozpoznały typ uderzenia serca. Najniższą wartość otrzymano dla klasyfikatora SBM + RBF, która wynosi 92,88\%. Wynik ten mimo iż najwyższy jaki otrzymano dla tego zbioru danych i tak jest zadowalający. W przypadku zbioru danych 2, skuteczność nie jest już aż tak wysoka, tylko jeden klasyfikator(SVM + RBF) uzyskał wartość 99\%. Klasyfikator Linear SVM nie zbyt dobrze sprawdził się w przypadku tego zestawu danych, skuteczność wyniosła jedynie 76\%, co w porównaniu z resztą klasyfikatorów nie jest satysfakcjonującym wynikiem. Powodem tak niskiej wartości skuteczności może być charakter występujących cech w zborze danych 2. 
+
+
+
+
+
+\subsection{Czasu uczenia i klasyfikacji}
+
+\begin{table}[h]
+\centering
+\caption{Czasy uczenia i klasyfikacji - dane Piotra}
+\label{timesTable1}
+\begin{tabular}{l|l|l|l|l|l|l|}
+\cline{2-7}
+                                        & kNN & ENN & Linear SVM & SVM + RBF & Naive Bayes & LDA \\ \hline
+\multicolumn{1}{|l|}{Czas uczenia}      &  -  &  -   &  $8517\: ms$   &   $13481\: ms$   &   $21.9034\: ms$ & $15\: ms$    \\ \hline
+\multicolumn{1}{|l|}{Czas klasyfikacji} &  $109 \: ms$   &   $1094\: ms$   &   $1\: ms$  &      $79\: ms$     &     $29.2936\: ms$        & $< 1\: ms$  \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+
+\begin{table}[h]
+\centering
+\caption{Czasy uczenia i klasyfikacji  - dane Iwony}
+\label{timesTable2}
+\begin{tabular}{l|l|l|l|l|l|l|}
+\cline{2-7}
+                                        & kNN & ENN & Linear SVM & SVM + RBF & Naive Bayes & LDA \\ \hline
+\multicolumn{1}{|l|}{Czas uczenia}      &  -  &  -   &  $25003\: ms$   &   $7865\: ms$   &   $22.0936 \: ms$ & -    \\ \hline
+\multicolumn{1}{|l|}{Czas klasyfikacji} &  $3563 \: ms$   &   $36328\: ms$   &   $26\: ms$  &      $1961.08\: ms$     &     $1925.88\: ms$        & - \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Czułość i specyficzność klasyfikatorów}
 
 \begin{table}[h]
 \centering
@@ -1211,54 +1274,6 @@ Specyficzność &  100\%   &  100\%   &     100\%       &      100\%     &   98.
 \end{tabular}
 \end{table}
 
-
-
-\begin{table}[h]
-\centering
-\caption{Skuteczność klasyfikacji - dane Piotra}
-\label{accuracyTable1}
-\begin{tabular}{|l|l|l|l|l|l|}
-\hline
-kNN & ENN & Linear SVM & SVM + RBF & Naive Bayes & LDA \\ \hline
-  98\%   &  98\%  & 76\%       & 99\%      & 96\%        &     \\ \hline
-\end{tabular}
-\end{table}
-
-\begin{table}[h]
-\centering
-\caption{Czasy uczenia i klasyfikacji - dane Piotra}
-\label{timesTable1}
-\begin{tabular}{l|l|l|l|l|l|l|}
-\cline{2-7}
-                                        & kNN & ENN & Linear SVM & SVM + RBF & Naive Bayes & LDA \\ \hline
-\multicolumn{1}{|l|}{Czas uczenia}      &  -  &  -   &  $8517\: ms$   &   $13481\: ms$   &   $21.9034\: ms$ & $15\: ms$    \\ \hline
-\multicolumn{1}{|l|}{Czas klasyfikacji} &  $109 \: ms$   &   $1094\: ms$   &   $1\: ms$  &      $79\: ms$     &     $29.2936\: ms$        & $< 1\: ms$  \\ \hline
-\end{tabular}
-\end{table}
-
-
-\begin{table}[h]
-\centering
-\caption{Skuteczność klasyfikacji - dane Iwony}
-\label{accuracyTable2}
-\begin{tabular}{|l|l|l|l|l|l|}
-\hline
-kNN & ENN & Linear SVM & SVM + RBF & Naive Bayes & LDA \\ \hline
-  99\%   &  99\%  & 99.7261\%       & 92.8789\%      & 99.8783\%        &   -  \\ \hline
-\end{tabular}
-\end{table}
-
-\begin{table}[h]
-\centering
-\caption{Czasy uczenia i klasyfikacji  - dane Iwony}
-\label{timesTable2}
-\begin{tabular}{l|l|l|l|l|l|l|}
-\cline{2-7}
-                                        & kNN & ENN & Linear SVM & SVM + RBF & Naive Bayes & LDA \\ \hline
-\multicolumn{1}{|l|}{Czas uczenia}      &  -  &  -   &  $25003\: ms$   &   $7865\: ms$   &   $22.0936 \: ms$ & -    \\ \hline
-\multicolumn{1}{|l|}{Czas klasyfikacji} &  $3563 \: ms$   &   $36328\: ms$   &   $26\: ms$  &      $1961.08\: ms$     &     $1925.88\: ms$        & - \\ \hline
-\end{tabular}
-\end{table}
 
 
 Testy wykonano na komputerze wyposażonym w procesor Intel Core i5-4200H o taktowaniu $2.80 \: GHz$ oraz 8 $Gb$ RAM w systemie operacyjnym Windows 10 64-bit.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.10)  12 JAN 2017 18:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.10)  12 JAN 2017 19:50
 entering extended mode
 **./Raport_czastkowy.tex
 (Raport_czastkowy.tex
@@ -1475,7 +1475,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[37] [38] (Raport_czastkowy.aux)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[37] [38] [39] (Raport_czastkowy.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1511,9 +1514,9 @@ TeX/2.9/fonts/type1/public/pl/plr17.pfb><C:/Users/Iwona/AppData/Roaming/MiKTeX/
 2.9/fonts/type1/public/pl/plr8.pfb><C:/Users/Iwona/AppData/Roaming/MiKTeX/2.9/f
 onts/type1/public/pl/plti10.pfb><C:/Users/Iwona/AppData/Roaming/MiKTeX/2.9/font
 s/type1/public/pl/pltt10.pfb>
-Output written on Raport_czastkowy.pdf (38 pages, 817844 bytes).
+Output written on Raport_czastkowy.pdf (39 pages, 819827 bytes).
 PDF statistics:
- 252 PDF objects out of 1000 (max. 8388607)
+ 255 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  116 words of extra memory for PDF output out of 10000 (max. 10000000)
 
