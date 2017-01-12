@@ -1,0 +1,13 @@
+\BOOKMARK [1][-]{section.1}{Wstep}{}% 1
+\BOOKMARK [1][-]{section.2}{Zarys proponowanego rozwiazania}{}% 2
+\BOOKMARK [1][-]{section.3}{Obliczenie cech kompleks\363w QRS}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Matematyczny spos\363b obliczenia cech}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Klasyfikacja przy uzyciu obliczonych cech}{section.3}% 5
+\BOOKMARK [1][-]{section.4}{Metoda maszyny wektor\363w nosnych \(SVM\)}{}% 6
+\BOOKMARK [2][-]{subsection.4.1}{Podstawowe za\233ozenia metody}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.2}{Radial Basis Function}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.3}{Wykorzystana metoda implementacji}{section.4}% 9
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Matematyczne podstawy}{subsection.4.3}% 10
+\BOOKMARK [3][-]{subsubsection.4.3.2}{Implementacja w C++}{subsection.4.3}% 11
+\BOOKMARK [1][-]{section.5}{Wyniki}{}% 12
+\BOOKMARK [1][-]{section.6}{Wnioski}{}% 13
