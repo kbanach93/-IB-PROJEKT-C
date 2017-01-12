@@ -1249,6 +1249,25 @@ Dla czterech klasyfikatorów skuteczność poprawnego zaklasyfikowania uderzenia
 
 \subsection{Czułość i specyficzność klasyfikatorów}
 
+W celu oceny opracowanych algorytmów pod kątem ich dokładności zdecydowano się na obliczenie ich czułości/wrażliwości oraz secyficzności.\\
+
+Wrażliwość/czułość (ang. sensitivity) może być wyznaczona jakos stosunek TP do sumy TP oraz FN.
+ $$
+sensitivity = \frac{TP}{TP + FN}
+$$
+gdzie\\
+\\
+$TP (ang. true positive)$ - liczba poprawnie sklasyfikowanych przykładów z wybranej klasy (ang. hit)\\
+$FN (ang. false negative)$ - liczba błędnie sklasyfikowanych przykładów z tej klasy, tj. decyzja negatywna podczas gdy przykład w rzeczywistości jest pozytywny (błąd pominięcia - z ang. miss)\\
+\\
+Specyficzność (ang. specifity) może być wyznaczona jakos stosunek TN do sumy FP oraz TN.\\
+ $$
+specifity = \frac{TN}{FP + TN}
+$$
+\\
+$TN (ang. true negative)$ - liczba przykładów poprawnie nie przydzielonych do wybranej klasy (poprawnie odrzuconych z ang. correct rejection)\\
+$FP (ang. false positive)$ - liczba przykładów błędnie przydzielonych do wybranej klasy, podczas gdy w rzeczywistości do niej nie należą (ang. false alarm)\\
+
 \begin{table}[h]
 \centering
 \caption{Porównanie czułości i specyficzności - dane Piotra}
