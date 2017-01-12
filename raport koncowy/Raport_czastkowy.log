@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.5)  12 JAN 2017 16:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.5)  12 JAN 2017 17:18
 entering extended mode
 **./Raport_czastkowy.tex
 (Raport_czastkowy.tex
@@ -1390,6 +1390,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 836--837
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [28] [29] (Raport_czastkowy.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1400,8 +1406,8 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  6961 strings out of 493333
- 96692 string characters out of 3139176
- 181555 words of memory out of 3000000
+ 96679 string characters out of 3139176
+ 181573 words of memory out of 3000000
  10363 multiletter control sequences out of 15000+200000
  13639 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1425,7 +1431,7 @@ nts/type1/public/pl/plr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/p
 l/plr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/pl/plr8.pfb><C:/Pro
 gram Files/MiKTeX 2.9/fonts/type1/public/pl/plti10.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/pl/pltt10.pfb>
-Output written on Raport_czastkowy.pdf (29 pages, 585315 bytes).
+Output written on Raport_czastkowy.pdf (29 pages, 585958 bytes).
 PDF statistics:
  203 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

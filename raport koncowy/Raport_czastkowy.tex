@@ -848,6 +848,33 @@ Przeprowadzono test działania programu. Sprawdzono czas realizacji algorytmu or
 
 \begin{table}[h]
 \centering
+\caption{Porównanie czułości i specyficzności - dane Piotra}
+\label{sens1}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+              & kNN & ENN & Linear SVM & SVM + RBF & Naive Bayes \\ \hline
+Czułość       &  97\%  & 100\%  &    100\%    &    100\%   &      97.3684\%      \\ \hline
+Specyficzność &   100\%   &  92\%   &     4\%       &     96\%   &       92\%      \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\caption{Porównanie czułości i specyficzności - dane Iwony}
+\label{sens2}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+              & kNN & ENN & Linear SVM & SVM + RBF & Naive Bayes \\ \hline
+Czułość       &  99\%   &  99\%   &    99.7129\%        &     92.5678\%       &   99.9681\%          \\ \hline
+Specyficzność &  100\%   &  100\%   &     100\%       &      100\%     &   98.0132\%          \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[h]
+\centering
 \caption{Skuteczność klasyfikacji - dane Piotra}
 \label{accuracyTable1}
 \begin{tabular}{|l|l|l|l|l|l|}
@@ -888,8 +915,8 @@ kNN & ENN & Linear SVM & SVM + RBF & Naive Bayes & LDA \\ \hline
 \begin{tabular}{l|l|l|l|l|l|l|}
 \cline{2-7}
                                         & kNN & ENN & Linear SVM & SVM + RBF & Naive Bayes & LDA \\ \hline
-\multicolumn{1}{|l|}{Czas uczenia}      &  -  &  -   &  $25003\: ms$   &   $7865\: ms$   &   $21.9497 \: ms$ & -    \\ \hline
-\multicolumn{1}{|l|}{Czas klasyfikacji} &  $3563 \: ms$   &   $36328\: ms$   &   $26\: ms$  &      $2920\: ms$     &     $1925.88\: ms$        & - \\ \hline
+\multicolumn{1}{|l|}{Czas uczenia}      &  -  &  -   &  $25003\: ms$   &   $7865\: ms$   &   $22.0936 \: ms$ & -    \\ \hline
+\multicolumn{1}{|l|}{Czas klasyfikacji} &  $3563 \: ms$   &   $36328\: ms$   &   $26\: ms$  &      $1961.08\: ms$     &     $1925.88\: ms$        & - \\ \hline
 \end{tabular}
 \end{table}
 
