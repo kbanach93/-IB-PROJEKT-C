@@ -44,7 +44,7 @@ w których natychmiastowe leczenie nie jest konieczne. Jednak pominięcie leczen
 Klasyfikacja uderzeń, która zostanie przedstawiona w tym projekcie może być pomocą do rozpoznawania arytmii serca należącej do drugiej grupy. Sklasyfikowanie występujących rodzajów bicia serca jest podstawowym krokiem do stwierdzenia wystąpienia odchyleń w tej dziedzinie. Klasyfikacja ta jest bardzo czasochłonna i dlatego podjęto wiele prób w celu zautomatyzowania tego procesu . 
 
 
- 	W tej pracy do rozpoznania typów uderzeń serca wykorzystano różne klasyfikatory. Dla każdego przedstawiono ich opisy oraz metodę implantacji. Następnie w celu znalezienia optymalnego klasyfikatora do rozpoznawania typów uderzeń serca porówna efekty działania każdego z nich.. Porównano je pod względem skuteczności jaki i czasu potrzebnego na wykonanie algorytmu. 
+ 	Projekt realizuje klasyfikację próbek sygnału EKG pochodzących od pacjenta za pomocą następujących klasyfikatorów: k-Neraest Neighbours (kNN), Extended Nerest Neighbours (eNN), Radial Basis Function Kernel (RBF SVM), klasyfikator Bayesa, Linear SVM. Dla każdego algorytmu przedstawiono ich opisy oraz sposoby implementacji. Algorytmy działają na zasadzie uczenia – po wczytanie zbioru treningowego następuje uczenie, po którym następuje właściwa klasyfikacja dla zbioru testowego. Otrzymane wyniki (klasy dla poszczególnych próbek zbioru testowego) porównano z rzeczywistymi (właściwymi) klasami dla tych próbek, których wartości były znane. Dokonano porównania działania algorytmów na dwóch identycznych zbiorach danych, mierząc skuteczność, czas uczenia i klasyfikacji oraz czułość i specyficzność. 
  	\newpage
 
 \section{Linear SVM}
