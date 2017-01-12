@@ -845,6 +845,23 @@ Przeprowadzono test działania programu. Sprawdzono czas realizacji algorytmu or
 
 \newpage
 \section{Porównanie algorytmów}
+Porównania dokonano korzystając z dwóch zbiorów danych, w których każdy składał się z innego zestawu cech opisujących uderzenia serca. W obu grupach uderzenia zostały podzielone na dwie klasy: uderzenia \textit{V}, określające uderzenia wygenerowane w obrębie komory, zaliczane do paralogicznych oraz uderzenia \textit{N} reprezentujące normalną, poprawną pracę serca. 
+
+Korzystając z wyznaczonych zbiorów danych klasyfikatory porównano pod kątem skuteczności, czasu uczenia, czasu klasyfikacji w celu wskazania, który z klasyfikatorów najbardziej sprawdza się w rozpoznaniu uderzeń serca. 
+
+\subsection{Opis zbiorów danych}
+\subsubsection{Zbiór danych 1}
+Pierwsza grupa danych opisana jest pięcioma cechami, bazującymi na interwałach RR,są nimi:
+\begin{itemize}
+\item Pre interval RR - odległość miedzy aktualnym uderzeniem serca(analizowanym), a poprzednim uderzeniem serca,
+\item Post inreval RR  - odległość między analizowanym uderzenie serca a kolejnym uderzeniem,
+\item Average RR - średnia długość interwału RR dla całego analizowanego sygnału,
+\item Ratio1 - stosunek pre RR interwal do post RR interval,
+\item Ratio2 - stosunek per interwalu do Avarage RR.
+\end{itemize}
+
+Cechy zostały wyznaczone dla sygnałów 228.dat i 100.dat pochodzących z bazy danych MIT-BIH. Z wyznaczonych danych utworzono dwie grupy: treningową oraz testową, które odpowiednio składały się z 400 i 100 próbek. 
+
 
 \begin{table}[h]
 \centering
@@ -922,5 +939,8 @@ kNN & ENN & Linear SVM & SVM + RBF & Naive Bayes & LDA \\ \hline
 
 
 Testy wykonano na komputerze wyposażonym w procesor Intel Core i5-4200H o taktowaniu $2.80 \: GHz$ oraz 8 $Gb$ RAM w systemie operacyjnym Windows 10 64-bit.
+
+
+
 
 \end{document}
