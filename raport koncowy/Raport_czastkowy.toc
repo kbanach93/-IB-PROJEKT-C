@@ -48,6 +48,7 @@
 \contentsline {section}{\numberline {8}Por\IeC {\'o}wnanie algorytm\IeC {\'o}w}{40}
 \contentsline {subsection}{\numberline {8.1}Opis zbior\IeC {\'o}w danych}{40}
 \contentsline {subsubsection}{\numberline {8.1.1}Zbi\IeC {\'o}r danych 1}{40}
+\contentsline {subsubsection}{\numberline {8.1.2}Zbi\IeC {\'o}r danych 2}{40}
 \contentsline {subsection}{\numberline {8.2}Skuteczno\IeC {\'s}\IeC {\'c} klasyfikacji}{40}
 \contentsline {subsection}{\numberline {8.3}Czas uczenia i klasyfikacji}{41}
-\contentsline {subsection}{\numberline {8.4}Czu\IeC {\l }o\IeC {\'s}\IeC {\'c} i specyficzno\IeC {\'s}\IeC {\'c} klasyfikator\IeC {\'o}w}{41}
+\contentsline {subsection}{\numberline {8.4}Czu\IeC {\l }o\IeC {\'s}\IeC {\'c} i specyficzno\IeC {\'s}\IeC {\'c} klasyfikator\IeC {\'o}w}{42}
