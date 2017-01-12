@@ -23,7 +23,7 @@
 \contentsline {subsection}{\numberline {4.3}Klasy}{24}
 \contentsline {subsection}{\numberline {4.4}Implementacja prototypu algorytmu w \IeC {\'s}rodowisku MATLAB}{25}
 \contentsline {section}{\numberline {5}Extended Nearest Neighbours}{25}
-\contentsline {subsection}{\numberline {5.1}Ograniczenia metody k-NN \nobreakspace {}\cite {knn}}{25}
+\contentsline {subsection}{\numberline {5.1}Ograniczenia metody k-NN}{25}
 \contentsline {subsection}{\numberline {5.2}Opis metody eNN }{25}
 \contentsline {subsection}{\numberline {5.3}Implementacja w \IeC {\'s}rodowisku MatLab}{26}
 \contentsline {subsection}{\numberline {5.4}Podsumowanie}{26}
