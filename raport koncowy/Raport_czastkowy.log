@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.21)  12 JAN 2017 22:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.10.21)  12 JAN 2017 22:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1466,41 +1466,51 @@ Package pdftex.def Info: obrazy/testwynik.png used on input line 1117.
 (pdftex.def)             Requested size: 312.9803pt x 283.1486pt.
  [34 <./obrazy/treningtest1.png (PNG copy)> <./obrazy/testwynik.png (PNG copy)>
 ] [35] [36]
-Underfull \hbox (badness 10000) in paragraph at lines 1249--1250
+Underfull \hbox (badness 10000) in paragraph at lines 1238--1239
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1254--1262
+Underfull \hbox (badness 10000) in paragraph at lines 1246--1247
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1254--1262
+Underfull \hbox (badness 10000) in paragraph at lines 1251--1259
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1254--1262
+Underfull \hbox (badness 10000) in paragraph at lines 1251--1259
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1254--1262
+Underfull \hbox (badness 10000) in paragraph at lines 1251--1259
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1264--1269
+Underfull \hbox (badness 10000) in paragraph at lines 1251--1259
+
+ []
+
+[37]
+Underfull \hbox (badness 10000) in paragraph at lines 1261--1266
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1264--1269
+Underfull \hbox (badness 10000) in paragraph at lines 1261--1266
 
  []
 
-[37] [38] (./Raport_czastkowy.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 1294--1295
+
+ []
+
+[38] (./Raport_czastkowy.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1537,7 +1547,7 @@ lic/pl/plti10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/pl/plt
 t10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm080
 0.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1000.
 pfb>
-Output written on Raport_czastkowy.pdf (38 pages, 798746 bytes).
+Output written on Raport_czastkowy.pdf (38 pages, 801605 bytes).
 PDF statistics:
  254 PDF objects out of 1000 (max. 8388607)
  161 compressed objects within 2 object streams
