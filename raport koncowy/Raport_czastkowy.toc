@@ -52,3 +52,4 @@
 \contentsline {subsection}{\numberline {8.2}Skuteczno\IeC {\'s}\IeC {\'c} klasyfikacji}{40}
 \contentsline {subsection}{\numberline {8.3}Czas uczenia i klasyfikacji}{41}
 \contentsline {subsection}{\numberline {8.4}Czu\IeC {\l }o\IeC {\'s}\IeC {\'c} i specyficzno\IeC {\'s}\IeC {\'c} klasyfikator\IeC {\'o}w}{41}
+\contentsline {subsection}{\numberline {8.5}Podsumowanie}{42}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.10)  12 JAN 2017 23:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.10)  12 JAN 2017 23:44
 entering extended mode
 **./Raport_czastkowy.tex
 (Raport_czastkowy.tex
@@ -837,11 +837,11 @@ Package pdftex.def Info: obrazy/logo_agh.jpg used on input line 28.
 [1
 
 {C:/Users/Iwona/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./obrazy/lo
-go_agh.jpg>] (Raport_czastkowy.toc)
+go_agh.jpg>] (Raport_czastkowy.toc [2])
 \tf@toc=\write3
 \openout3 = `Raport_czastkowy.toc'.
 
- [2] [3] [4]
+ [3] [4]
 <obrazy/svm_theory.png, id=20, 293.29575pt x 232.4685pt>
 File: obrazy/svm_theory.png Graphic file (type png)
 
@@ -1538,7 +1538,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1381--1386
 
  []
 
-[42] (Raport_czastkowy.aux)
+[42] [43] (Raport_czastkowy.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1574,9 +1574,9 @@ TeX/2.9/fonts/type1/public/pl/plr17.pfb><C:/Users/Iwona/AppData/Roaming/MiKTeX/
 2.9/fonts/type1/public/pl/plr8.pfb><C:/Users/Iwona/AppData/Roaming/MiKTeX/2.9/f
 onts/type1/public/pl/plti10.pfb><C:/Users/Iwona/AppData/Roaming/MiKTeX/2.9/font
 s/type1/public/pl/pltt10.pfb>
-Output written on Raport_czastkowy.pdf (42 pages, 953184 bytes).
+Output written on Raport_czastkowy.pdf (43 pages, 954478 bytes).
 PDF statistics:
- 268 PDF objects out of 1000 (max. 8388607)
+ 272 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
