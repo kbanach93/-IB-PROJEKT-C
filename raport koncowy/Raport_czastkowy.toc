@@ -45,5 +45,5 @@
 \contentsline {subsection}{\numberline {7.1}Opis zbior\IeC {\'o}w danych}{37}
 \contentsline {subsubsection}{\numberline {7.1.1}Zbi\IeC {\'o}r danych 1}{37}
 \contentsline {subsection}{\numberline {7.2}Skuteczno\IeC {\'s}\IeC {\'c} klasyfikacji}{37}
-\contentsline {subsection}{\numberline {7.3}Czasu uczenia i klasyfikacji}{38}
+\contentsline {subsection}{\numberline {7.3}Czas uczenia i klasyfikacji}{38}
 \contentsline {subsection}{\numberline {7.4}Czu\IeC {\l }o\IeC {\'s}\IeC {\'c} i specyficzno\IeC {\'s}\IeC {\'c} klasyfikator\IeC {\'o}w}{38}

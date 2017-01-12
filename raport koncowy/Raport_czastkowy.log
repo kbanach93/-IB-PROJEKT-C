@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.10)  12 JAN 2017 19:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2017.1.10)  12 JAN 2017 21:13
 entering extended mode
 **./Raport_czastkowy.tex
 (Raport_czastkowy.tex
@@ -869,10 +869,10 @@ Package pdftex.def Info: obrazy/support_vectors.png used on input line 92.
  [5 <./obrazy/svm_hyperplane.png> <./obrazy/support_vectors.png>] [6] [7] [8] [
 9]
 Package epstopdf Info: Source file: <obrazy/mainloop.eps>
-(epstopdf)                    date: 2017-01-12 17:25:39
+(epstopdf)                    date: 2017-01-12 21:12:35
 (epstopdf)                    size: 199344 bytes
 (epstopdf)             Output file: <obrazy/mainloop-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-01-12 17:25:39
+(epstopdf)                    date: 2017-01-12 21:12:35
 (epstopdf)                    size: 56558 bytes
 (epstopdf)             Command: <epstopdf --outfile=obrazy/mainloop-eps-convert
 ed-to.pdf obrazy/mainloop.eps>
@@ -888,11 +888,11 @@ e 340.
 (pdftex.def)             Requested size: 437.23688pt x 654.04855pt.
  [10]
 Package epstopdf Info: Source file: <obrazy/examineExample.eps>
-(epstopdf)                    date: 2017-01-12 17:25:39
+(epstopdf)                    date: 2017-01-12 21:12:35
 (epstopdf)                    size: 319302 bytes
 (epstopdf)             Output file: <obrazy/examineExample-eps-converted-to.pdf
 >
-(epstopdf)                    date: 2017-01-12 17:25:39
+(epstopdf)                    date: 2017-01-12 21:12:35
 (epstopdf)                    size: 103037 bytes
 (epstopdf)             Command: <epstopdf --outfile=obrazy/examineExample-eps-c
 onverted-to.pdf obrazy/examineExample.eps>
@@ -908,10 +908,10 @@ ut line 346.
 (pdftex.def)             Requested size: 373.09044pt x 671.20143pt.
  [11 <./obrazy/mainloop-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <obrazy/optimizePair.eps>
-(epstopdf)                    date: 2017-01-12 17:25:39
+(epstopdf)                    date: 2017-01-12 21:12:35
 (epstopdf)                    size: 217702 bytes
 (epstopdf)             Output file: <obrazy/optimizePair-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-01-12 17:25:39
+(epstopdf)                    date: 2017-01-12 21:12:35
 (epstopdf)                    size: 57539 bytes
 (epstopdf)             Command: <epstopdf --outfile=obrazy/optimizePair-eps-con
 verted-to.pdf obrazy/optimizePair.eps>
@@ -1465,20 +1465,42 @@ File: obrazy/testwynik.png Graphic file (type png)
 Package pdftex.def Info: obrazy/testwynik.png used on input line 1128.
 (pdftex.def)             Requested size: 312.9803pt x 283.1486pt.
  [35 <./obrazy/treningtest1.png (PNG copy)> <./obrazy/testwynik.png (PNG copy)>
-] [36]
+] [36] [37]
+Underfull \hbox (badness 10000) in paragraph at lines 1257--1258
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+ []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 1262--1270
+
+ []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 1262--1270
 
-[37] [38] [39] (Raport_czastkowy.aux)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1262--1270
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1262--1270
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1272--1277
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1272--1277
+
+ []
+
+[38] [39] (Raport_czastkowy.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1514,7 +1536,7 @@ TeX/2.9/fonts/type1/public/pl/plr17.pfb><C:/Users/Iwona/AppData/Roaming/MiKTeX/
 2.9/fonts/type1/public/pl/plr8.pfb><C:/Users/Iwona/AppData/Roaming/MiKTeX/2.9/f
 onts/type1/public/pl/plti10.pfb><C:/Users/Iwona/AppData/Roaming/MiKTeX/2.9/font
 s/type1/public/pl/pltt10.pfb>
-Output written on Raport_czastkowy.pdf (39 pages, 819827 bytes).
+Output written on Raport_czastkowy.pdf (39 pages, 823419 bytes).
 PDF statistics:
  255 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
