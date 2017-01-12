@@ -16,4 +16,15 @@
 \contentsline {subsection}{\numberline {3.1}Opis algorytmu}{21}
 \contentsline {subsection}{\numberline {3.2}Implementacja}{21}
 \contentsline {subsection}{\numberline {3.3}Wykorzystanie klasyfikatora do rozpoznawania uderze\IeC {\'n} serca}{22}
-\contentsline {section}{\numberline {4}Por\IeC {\'o}wnanie algorytm\IeC {\'o}w}{24}
+\contentsline {section}{\numberline {4}k-Nearest Neighbours}{24}
+\contentsline {subsection}{\numberline {4.1}Za\IeC {\l }o\IeC {\.z}enia wst\IeC {\k e}pne metody}{24}
+\contentsline {subsection}{\numberline {4.2}Opis metody \nobreakspace {}\cite {doktorska}}{24}
+\contentsline {subsection}{\numberline {4.3}Klasy}{24}
+\contentsline {subsection}{\numberline {4.4}Implementacja prototypu algorytmu w \IeC {\'s}rodowisku MATLAB}{25}
+\contentsline {subsection}{\numberline {4.5}Walidacja algorytmu}{25}
+\contentsline {section}{\numberline {5}Extended Nearest Neighbours}{25}
+\contentsline {subsection}{\numberline {5.1}Ograniczenia metody k-NN \nobreakspace {}\cite {knn}}{25}
+\contentsline {subsection}{\numberline {5.2}Opis metody eNN\nobreakspace {}\cite {enn} \nobreakspace {}\cite {enn2} }{25}
+\contentsline {subsection}{\numberline {5.3}Implementacja w \IeC {\'s}rodowisku MatLab}{26}
+\contentsline {subsection}{\numberline {5.4}Podsumowanie}{26}
+\contentsline {section}{\numberline {6}Por\IeC {\'o}wnanie algorytm\IeC {\'o}w}{28}
